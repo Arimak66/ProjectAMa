@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProjectAMa.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAMa"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="400" FontSize="14" Background="CornflowerBlue">
+    <Border Background="Black" CornerRadius="20" Margin="20">
+        <StackPanel Margin="20">
+        <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="Username:" FontSize="12" Foreground="White"/>
+            <TextBox Name="txtUsername" Background="gray" Foreground="White" FontSize="18"/>
+            <Label Content="Password::" FontSize="12" Foreground="White"/>
+            <PasswordBox Name="txtPassword" Background="gray" Foreground="White" FontSize="18"/>
+            <Button Name="btnSubmit" Content="Submit" Margin="60,10" Background="gray" Foreground="White" FontSize="18" Click="btnSubmit_Click"/>
+
+
+
+        </StackPanel>
+    </Border>
+  
+</Window>
