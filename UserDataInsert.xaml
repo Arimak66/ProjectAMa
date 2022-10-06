@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProjectAMa.UserDataInsert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAMa"
+        mc:Ignorable="d"
+         WindowStartupLocation="CenterScreen" Background="LightGray"
+        Title="UserDataInsert" Height="500" Width="400">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="165*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Username" HorizontalAlignment="Left" Height="29" Margin="21,47,0,0" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="29" Margin="22,111,0,0" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Identity" HorizontalAlignment="Left" Height="29" Margin="21,183,0,0" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Firstname" HorizontalAlignment="Left" Height="29" Margin="21,254,0,0" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Lastname" HorizontalAlignment="Left" Height="29" Margin="21,325,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.471,1.466"/>
+        <TextBox x:Name="InsertUsername" HorizontalAlignment="Left" Height="25" Margin="21,81,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117"/>
+        <TextBox x:Name="InsertPassword" HorizontalAlignment="Left" Height="25" Margin="21,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117"/>
+        <TextBox x:Name="InsertFirstname" HorizontalAlignment="Left" Height="25" Margin="21,295,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117"/>
+        <TextBox x:Name="InsertLastname" HorizontalAlignment="Left" Height="25" Margin="22,368,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="CreateNewUser" Content="Create a new user"  HorizontalAlignment="Left" Height="29" Margin="21,414,0,0" VerticalAlignment="Top" Width="117" Click="CreateNewUser_Click" RenderTransformOrigin="0.493,1.988"/>
+        <Button x:Name="CloseWindow" Content="Close window" HorizontalAlignment="Left" Margin="210,414,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="29" Width="126" Click="CloseWindow_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Create new user" VerticalAlignment="Top" Width="138" FontSize="14" FontWeight="Bold"/>
+        <ComboBox x:Name="IdentitySelect" HorizontalAlignment="Left" Margin="22,220,0,0" VerticalAlignment="Top" Width="145" SelectionChanged="IdentitySelect_SelectionChanged">
+            <ComboBoxItem Content="Student" IsSelected="False"></ComboBoxItem>
+            <ComboBoxItem Content="Administrator"></ComboBoxItem>
+            <ComboBoxItem Content="Teacher"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

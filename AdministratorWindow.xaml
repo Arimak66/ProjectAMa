@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
-        Title="AdministratorWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"        
+        Title="AdministratorWindow" Height="450" Width="800" Background="lightBlue">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="137*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="4" Content="Add a new user" HorizontalAlignment="Left" Height="50" Margin="47,20,0,0" VerticalAlignment="Top" Width="137" Grid.Row="1" Click="Button_Click"/>
+        <Button x:Name="CloseThisWindow" Grid.Column="4" Content="Close this window and exit" HorizontalAlignment="Center" Margin="0,56,0,0" Grid.Row="3" VerticalAlignment="Top" Height="45" Width="149" Click="CloseThisWindow_Click"/>
+
     </Grid>
 </Window>

@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
-        Title="StudentWindow" Height="450" Width="800" >
+        WindowStartupLocation="CenterScreen"
+        Title="StudentWindow" Height="450" Width="800" Background="LightBlue">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="26*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="365*"/>
         </Grid.RowDefinitions>
+        <Button Content="Button" HorizontalAlignment="Left" Height="46" Margin="50,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Click="Button_Click"/>
+        <TextBox Name="welcomeText" HorizontalAlignment="Left" Height="31" Margin="36,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419"/>
 
     </Grid>
 </Window>

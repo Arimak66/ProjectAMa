@@ -23,5 +23,17 @@ namespace ProjectAMa
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserDataInsert userDataInsert = new UserDataInsert();
+            userDataInsert.Show();
+
+        }
+
+        private void CloseThisWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
