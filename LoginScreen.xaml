@@ -13,10 +13,10 @@
         <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
             <Label Content="Username:" FontSize="12" Foreground="White"/>
-            <TextBox Name="txtUsername" Background="gray" Foreground="White" FontSize="18"/>
-            <Label Content="Password::" FontSize="12" Foreground="White"/>
-            <PasswordBox Name="txtPassword" Background="gray" Foreground="White" FontSize="18"/>
-            <Button Name="btnSubmit" Content="Submit" Margin="60,10" Background="gray" Foreground="White" FontSize="18" Click="btnSubmit_Click"/>
+            <TextBox Name="txtUsername" Background="LightGray" Foreground="Black" FontSize="18"/>
+            <Label Content="Password:" FontSize="12" Foreground="White"/>
+            <PasswordBox Name="txtPassword" Background="LightGray" Foreground="Black" FontSize="18"/>
+            <Button Name="btnSubmit" Content="Submit" Margin="60,10" Background="gray" Foreground="WHite" FontSize="18" Click="btnSubmit_Click"/>
 
 
 

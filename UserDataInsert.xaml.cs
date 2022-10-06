@@ -17,9 +17,7 @@ using Dapper;
 
 namespace ProjectAMa
 {
-    /// <summary>
-    /// Interaction logic for UserDataInsert.xaml
-    /// </summary>
+// New user insertion for administrators
     public partial class UserDataInsert : Window
     {
         public UserDataInsert()
@@ -28,25 +26,7 @@ namespace ProjectAMa
         }
         private void IdentitySelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            /*MessageBox.Show(IdentitySelect.SelectedIndex.ToString());
-            int identity;
-            if (IdentitySelect.Text != null)
-            {
-                switch (IdentitySelect.Text)
-                {
-                    case "Student":
-                        identity = 1;
-                        break;
-                    case "Administrator":
-                        identity = 2;
-                        break;
-                    case "Teacher":
-                        identity = 3;
-                        break;
-                }
-            }
-
-            //InsertIdentity.Text = identity;*/
+     //placeholder possibly
         }
         private void CreateNewUser_Click(object sender, RoutedEventArgs e)
         {
@@ -58,6 +38,11 @@ namespace ProjectAMa
                     $"('{InsertUsername.Text}','{InsertPassword.Text}','{IdentitySelect.SelectedIndex +1}'," +
                     $"'{InsertFirstname.Text}','{InsertLastname.Text}')");
                     MessageBox.Show("New user was created succesfully!");
+
+                    InsertUsername.Text = "";
+                    InsertPassword.Text = "";
+                    InsertFirstname.Text = "";
+                    InsertLastname.Text = "";
                 }
                 else
                 {

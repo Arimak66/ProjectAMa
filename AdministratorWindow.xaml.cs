@@ -35,5 +35,11 @@ namespace ProjectAMa
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
+        }
     }
 }

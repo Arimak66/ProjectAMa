@@ -4,7 +4,7 @@ using System.Runtime.Remoting.Messaging;
 using System;
 using MySqlConnector;
 using Dapper;
-
+//This whole thing is redundant now, possibly should be deleted. Or otherwise could be turned into a .dll along with all the other functions
 namespace ProjectAMa
 {
     public class DataAccess

@@ -23,5 +23,16 @@ namespace ProjectAMa
         {
             InitializeComponent();
         }
+
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
+        }
     }
 }

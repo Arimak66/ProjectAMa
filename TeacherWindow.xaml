@@ -8,6 +8,8 @@
         WindowStartupLocation="CenterScreen"
         Title="TeacherWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="CloseWindow" Content="Close window and exit" HorizontalAlignment="Left" Height="52" Margin="603,345,0,0" VerticalAlignment="Top" Width="165" Click="CloseWindow_Click"/>
+        <Button x:Name="ChangePassword" Content="Change Password" HorizontalAlignment="Left" Margin="603,273,0,0" VerticalAlignment="Top" Height="44" Width="165" Click="ChangePassword_Click"/>
+
     </Grid>
 </Window>

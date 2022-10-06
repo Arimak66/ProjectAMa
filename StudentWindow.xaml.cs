@@ -28,9 +28,20 @@ namespace ProjectAMa
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Klikkasit");
+            MessageBox.Show("Klikkasit sitten nappulaa ;)");
         }
 
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+     
+            this.Close();
+            
+        }
 
+        private void ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
+        }
     }
 }

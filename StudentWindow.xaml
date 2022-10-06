@@ -14,6 +14,8 @@
         </Grid.RowDefinitions>
         <Button Content="Button" HorizontalAlignment="Left" Height="46" Margin="50,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Click="Button_Click"/>
         <TextBox Name="welcomeText" HorizontalAlignment="Left" Height="31" Margin="36,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419"/>
+        <Button x:Name="CloseWindow" Content="Close window and exit" HorizontalAlignment="Left" Height="57" Margin="584,283,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Click="CloseWindow_Click"/>
+        <Button x:Name="ChangePassword" Content="Change password" HorizontalAlignment="Left" Height="49" Margin="584,217,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Click="ChangePassword_Click"/>
 
     </Grid>
 </Window>
