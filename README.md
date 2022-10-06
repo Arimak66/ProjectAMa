@@ -1,2 +1,2 @@
 # ProjectAMa
-This application possibly will use the university-database created during the earlier days of the bootcamp directly from WPF. 
+This application possibly will use the university-database created during the earlier days of the bootcamp directly from WPF. Bit messy at the moment, but maybe someday...
