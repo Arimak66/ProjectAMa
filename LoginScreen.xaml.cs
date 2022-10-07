@@ -16,6 +16,9 @@ using MySqlConnector;
 using Dapper;
 using System.Data.SqlClient;
 using Org.BouncyCastle.Tls;
+using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Crypto.Generators;
+
 namespace ProjectAMa
 {
     //This is a common login-window for all categories of university-users. Users are directed to different window paths based on their credentials/authorizations
@@ -33,13 +36,14 @@ namespace ProjectAMa
             string Username = txtUsername.Text;
             string Password = txtPassword.Password;
             UserName = txtUsername.Text;
-         //Extremely simple login, this should be changed to encrypted passwords or some other means of user authorization
             if (Username == "" || Password == "")
             {
                 MessageBox.Show("Username or Password cannot be empty! Try Again!");
             }
-            var output = connection.ExecuteScalar($"select count(username) from user where username='{Username}' and password='{Password}'");
-            if (Convert.ToInt32(output)== 1)
+            //var output = connection.ExecuteScalar($"select count(username) from user where username='{Username}' and password='{Password}'");
+            //if (Convert.ToInt32(output)== 1)
+            var output = connection.ExecuteScalar($"select password from user where username='{Username}'").ToString();
+            if (BCrypt.Net.BCrypt.Verify(Password, output) /*|| txtPassword.Password == output*/)
             {
                  var Identity = connection.ExecuteScalar<string>($"select identity from user where username='{Username}'");
 

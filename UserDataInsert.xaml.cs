@@ -34,8 +34,9 @@ namespace ProjectAMa
             {
                 if (InsertUsername.Text != null)    
                 {
+                    string PassWord = BCrypt.Net.BCrypt.HashPassword(InsertPassword.Text);
                     connection.Execute($"insert into user (username,password,identity,firstname,lastname) values " +
-                    $"('{InsertUsername.Text}','{InsertPassword.Text}','{IdentitySelect.SelectedIndex +1}'," +
+                    $"('{InsertUsername.Text}','{PassWord}','{IdentitySelect.SelectedIndex +1}'," +
                     $"'{InsertFirstname.Text}','{InsertLastname.Text}')");
                     MessageBox.Show("New user was created succesfully!");
 
