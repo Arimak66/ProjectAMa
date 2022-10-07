@@ -15,30 +15,18 @@ using System.Windows.Shapes;
 namespace ProjectAMa
 {
     /// <summary>
-    /// Interaction logic for TeacherWindow.xaml
+    /// Interaction logic for CreateNewCourse.xaml
     /// </summary>
-    public partial class TeacherWindow : Window
+    public partial class CreateNewCourse : Window
     {
-        public TeacherWindow()
+        public CreateNewCourse()
         {
             InitializeComponent();
         }
 
-        private void CloseWindow_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void ChangePassword_Click(object sender, RoutedEventArgs e)
-        {
-            ChangePassword changePassword = new ChangePassword();
-            changePassword.Show();
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreateNewCourse createNewCourse = new CreateNewCourse();
-            createNewCourse.Show();
+            MessageBox.Show("Work in progress");
         }
     }
 }
