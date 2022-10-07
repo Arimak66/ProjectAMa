@@ -24,7 +24,7 @@ namespace ProjectAMa
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddNewUser_Click(object sender, RoutedEventArgs e)
         {
             UserDataInsert userDataInsert = new UserDataInsert();
             userDataInsert.Show();
@@ -36,10 +36,17 @@ namespace ProjectAMa
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ChangePassword_Click(object sender, RoutedEventArgs e)
         {
             ChangePassword changePassword = new ChangePassword();
             changePassword.Show();
         }
+
+        private void CreateNewCourse_Click(object sender, RoutedEventArgs e)
+        {
+            CreateNewCourse createNewCourse = new CreateNewCourse();
+            createNewCourse.Show();
+        }
+
     }
 }

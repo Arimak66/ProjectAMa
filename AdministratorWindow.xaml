@@ -21,9 +21,10 @@
             <RowDefinition Height="108*"/>
             <RowDefinition Height="137*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="4" Content="Add a new user" HorizontalAlignment="Left" Height="50" Margin="47,20,0,0" VerticalAlignment="Top" Width="137" Grid.Row="1" Click="Button_Click"/>
+        <Button x:Name="AddNewUser" Grid.Column="4" Content="Add a new user" HorizontalAlignment="Center" Height="50" Margin="0,20,0,0" VerticalAlignment="Top" Width="149" Grid.Row="1" Click="AddNewUser_Click"/>
         <Button x:Name="CloseThisWindow" Grid.Column="4" Content="Close this window and exit" HorizontalAlignment="Center" Margin="0,56,0,0" Grid.Row="3" VerticalAlignment="Top" Height="45" Width="149" Click="CloseThisWindow_Click"/>
-        <Button x:Name="ChangePassword" Grid.Column="4" Content="Change password" HorizontalAlignment="Center" Margin="0,70,0,0" Grid.Row="2" VerticalAlignment="Top" Height="54" Grid.RowSpan="2" Width="149" Click="Button_Click_1"/>
+        <Button x:Name="ChangePassword" Grid.Column="4" Content="Change password" HorizontalAlignment="Center" Margin="0,70,0,0" Grid.Row="2" VerticalAlignment="Top" Height="54" Grid.RowSpan="2" Width="149" Click="ChangePassword_Click"/>
+        <Button x:Name="CreateNewCourse" Grid.Column="4" Content="Create new course" HorizontalAlignment="Center" Margin="0,91,0,0" Grid.Row="1" VerticalAlignment="Top" Height="54" Grid.RowSpan="2" Width="149" Click="CreateNewCourse_Click"/>
 
     </Grid>
 </Window>

@@ -8,11 +8,14 @@
         WindowStartupLocation="CenterScreen"
         Title="CreateNewCourse" Height="350" Width="300">
     <Grid>
-        <TextBox x:Name="textNewCourseName" HorizontalAlignment="Left" Height="21" Margin="20,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
-        <TextBox x:Name="textCreditpoints" HorizontalAlignment="Left" Height="22" Margin="20,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
-        <Label Content="New course title" HorizontalAlignment="Left" Height="23" Margin="20,20,0,0" VerticalAlignment="Top" Width="101"/>
-        <Label Content="Creditpoints" HorizontalAlignment="Left" Height="23" Margin="20,71,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button Content="Create course" HorizontalAlignment="Left" Height="45" Margin="20,134,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click"/>
+        <TextBox x:Name="textNewCourseName" HorizontalAlignment="Left" Height="21" Margin="20,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <TextBox x:Name="textCreditpoints" HorizontalAlignment="Left" Height="22" Margin="20,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <Label Content="New course title" HorizontalAlignment="Left" Height="23" Margin="20,56,0,0" VerticalAlignment="Top" Width="101"/>
+        <Label Content="Creditpoints" HorizontalAlignment="Left" Height="23" Margin="20,110,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button Content="Create course" HorizontalAlignment="Left" Height="45" Margin="20,192,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click"/>
+        <Button x:Name="CloseWindow" Content="Close window" HorizontalAlignment="Left" Height="46" Margin="20,260,0,0" VerticalAlignment="Top" Width="130" Click="CloseWindow_Click" RenderTransformOrigin="0.485,1.349"/>
+        <Label Content="Course Id" HorizontalAlignment="Left" Height="26" Margin="20,10,0,0" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="textCourseId" HorizontalAlignment="Left" Height="20" Margin="20,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
 
 
     </Grid>
