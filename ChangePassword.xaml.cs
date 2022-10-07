@@ -16,20 +16,30 @@ namespace ProjectAMa
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
                 var output = connection.ExecuteScalar($"select password from user where username = '{LoginScreen.UserName}';").ToString();
-                if(output != OldPassword.Text) { MessageBox.Show("Väärä vanha salasana! Yritäppä uuvestaan");
-                    OldPassword.Text = "";
-                    NewPassword.Text = "";
-                    ConfirmNewPassword.Text = "";
+                if (!BCrypt.Net.BCrypt.Verify(OldPassword.Password, output))
+                {
+                    MessageBox.Show("Old password does not match, try again!");
+                    OldPassword.Password = "";
+                    NewPassword.Password = "";
+                    ConfirmNewPassword.Password = "";
                 }
             }
-            if (NewPassword.Text != ConfirmNewPassword.Text)
-            { 
-                MessageBox.Show("Eipä mätsää salasanat, yritäppä uuvestaan");
-                OldPassword.Text = "";
-                NewPassword.Text = "";
-                ConfirmNewPassword.Text = "";          
+            if (NewPassword.Password != ConfirmNewPassword.Password)
+            {
+                MessageBox.Show("New passwords do not match, try again!");
+                OldPassword.Password = "";
+                NewPassword.Password= "";
+                ConfirmNewPassword.Password = "";
             }
-            MessageBox.Show("Ei vielä toimi, mutta maltahan ootella");
+            using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
+            { 
+                string PassWord= BCrypt.Net.BCrypt.HashPassword(NewPassword.Password);
+                connection.Execute($"update user set password = '{PassWord}'where username='{LoginScreen.UserName}'");
+                MessageBox.Show("Password changed successfully!");
+                OldPassword.Password = "";
+                NewPassword.Password = "";
+                ConfirmNewPassword.Password = "";
+            }
         }
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
         {
