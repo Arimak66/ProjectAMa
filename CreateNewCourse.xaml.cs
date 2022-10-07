@@ -30,14 +30,12 @@ namespace ProjectAMa
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
 
-                
+
             {
-                //var output = connection.Query($"count(idcourse) from course").ToString() ;
-                //MessageBox.Show(output);
-                //int idCourse=Convert.ToInt32(output)+1;
-                int idCourse = Convert.ToInt32(textCourseId.Text);
+                var output = connection.ExecuteScalar($"select max(idcourse) from course").ToString();
+                int idCourse = Convert.ToInt32(output);
                 short creditPoints = Convert.ToInt16(textCreditpoints.Text);
-                connection.Execute($"insert into course (idcourse,name,greditpoints) values ({idCourse},'{textNewCourseName.Text}',{creditPoints})"); ;
+                connection.Execute($"insert into course (idcourse,name,greditpoints) values ({idCourse+1},'{textNewCourseName.Text}',{creditPoints})"); ;
 
                 MessageBox.Show("New course created succesfully!");
                 textNewCourseName.Text = "";

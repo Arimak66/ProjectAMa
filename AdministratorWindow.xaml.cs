@@ -48,5 +48,24 @@ namespace ProjectAMa
             createNewCourse.Show();
         }
 
+        private void ListAllUsers_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under construction");
+        }
+
+        private void ListAllStudents_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under construction");
+        }
+
+        private void ListAllTeachers_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under construction");
+        }
+
+        private void ListAllAdministrators_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under construction");
+        }
     }
 }
