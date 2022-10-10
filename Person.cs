@@ -8,7 +8,7 @@ namespace ProjectAMa
 {
     public class Person
     {
-        public string iduser { get; set; }
+        public int iduser { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string identity { get; set; }
@@ -16,4 +16,7 @@ namespace ProjectAMa
         public string lastname { get; set; }
 
     }
+    public class student
+    { }
+
 }
