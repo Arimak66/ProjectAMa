@@ -25,12 +25,9 @@ namespace ProjectAMa
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
-
-
             {
                 var output = connection.ExecuteScalar($"select max(idcourse) from course").ToString();
                 int idCourse = Convert.ToInt32(output);
@@ -40,10 +37,8 @@ namespace ProjectAMa
                 MessageBox.Show("New course created succesfully!");
                 textNewCourseName.Text = "";
                 textCreditpoints.Text = "";
-
             }
         }
-
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

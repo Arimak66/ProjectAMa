@@ -9,7 +9,7 @@ namespace ProjectAMa
 {
     public class DataAccess
     {
-       /* public List<User> GetUser(string username)
+       /*public List<Userdata> GetUsers()
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
@@ -17,8 +17,8 @@ namespace ProjectAMa
                 //var output = connection.Query<Person>($"cmd.Users_GetUserByLastname @LastName", new {LastName=lname}).ToList();
                 return output;
             }
-        }
-        public void InsertPerson(string username, string password, string identity, string firstname, string lastname)
+        }*/
+        /*public void InsertPerson(string username, string password, string identity, string firstname, string lastname)
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
