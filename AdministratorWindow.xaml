@@ -26,7 +26,7 @@
         <Button x:Name="ChangePassword" Grid.Column="4" Content="Change password" HorizontalAlignment="Left" Margin="36,66,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="133" Click="ChangePassword_Click"/>
         <Button x:Name="CreateNewCourse" Grid.Column="4" Content="Create new course" HorizontalAlignment="Left" Margin="36,16,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="133" Click="CreateNewCourse_Click"/>
         <Label Content="List of users:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="38,19,0,0" VerticalAlignment="Top" Width="137"/>
-        <ListView x:Name="UserList" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="330" Margin="38,52,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="328" ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="False">
+        <ListView x:Name="UserList" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="330" Margin="38,52,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="328" ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="False" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="SC_Click">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="80" Header="Username" DisplayMemberBinding="{Binding Path=Username}"/>
