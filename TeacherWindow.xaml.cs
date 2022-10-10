@@ -34,5 +34,11 @@ namespace ProjectAMa
             ChangePassword changePassword = new ChangePassword();
             changePassword.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreateNewCourse createNewCourse = new CreateNewCourse();
+            createNewCourse.Show();
+        }
     }
 }
