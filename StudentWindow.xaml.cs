@@ -11,11 +11,12 @@ namespace ProjectAMa
     /// </summary>
     public partial class StudentWindow : Window
     {
+        public string UserName { get; private set; }
         public StudentWindow()
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Klikkasit sitten nappulaa, "+UserName);
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))

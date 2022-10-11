@@ -7,6 +7,7 @@ namespace ProjectAMa
 //Common password changing window for all user categories. Encryption/decryption needed here as well
     public partial class ChangePassword : Window
     {
+        public string UserName { get; private set; }
         public ChangePassword()
         {
             InitializeComponent();
@@ -15,7 +16,7 @@ namespace ProjectAMa
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
-                var output = connection.ExecuteScalar($"select password from user where username = '{LoginScreen.UserName}';").ToString();
+                var output = connection.ExecuteScalar($"select password from user where username = '{UserName}';").ToString();
                 if (!BCrypt.Net.BCrypt.Verify(OldPassword.Password, output))
                 {
                     MessageBox.Show("Old password does not match, try again!");
@@ -34,7 +35,7 @@ namespace ProjectAMa
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             { 
                 string PassWord= BCrypt.Net.BCrypt.HashPassword(NewPassword.Password);
-                connection.Execute($"update user set password = '{PassWord}'where username='{LoginScreen.UserName}'");
+                connection.Execute($"update user set password = '{PassWord}'where username='{UserName}'");
                 MessageBox.Show("Password changed successfully!");
                 OldPassword.Password = "";
                 NewPassword.Password = "";
