@@ -19,11 +19,11 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -39,8 +39,9 @@
                 Content="Create a new course" Click="CreateNewCourse_Click"/>
         <Label Content="List of users:" Grid.Column="1" Grid.Row="1" Margin="10" 
                Grid.ColumnSpan="2" FontSize="18" />
-        <ListView x:Name="UserList" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" 
-                  ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="True" 
+        <ListView Name="UserList" Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" 
+                  ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="False" 
+                    ScrollViewer.VerticalScrollBarVisibility="Visible"
                   SelectionChanged="SC_Click">
             <ListView.View>
                 <GridView>
