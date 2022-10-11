@@ -25,7 +25,7 @@ namespace ProjectAMa
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateCourse_Click(object sender, RoutedEventArgs e)
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {

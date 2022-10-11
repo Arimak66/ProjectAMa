@@ -5,12 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" Background="LightGray"
         Title="TeacherWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="CloseWindow" Content="Close window and exit" HorizontalAlignment="Left" Height="52" Margin="603,345,0,0" VerticalAlignment="Top" Width="165" Click="CloseWindow_Click"/>
-        <Button x:Name="ChangePassword" Content="Change Password" HorizontalAlignment="Left" Margin="603,273,0,0" VerticalAlignment="Top" Height="44" Width="165" Click="ChangePassword_Click"/>
-        <Button x:Name="CreateNewCourse" Content="Create new course" HorizontalAlignment="Left" Height="46" Margin="603,210,0,0" VerticalAlignment="Top" Width="165" Click="Button_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="CloseWindow" Content="Close window and exit" Grid.Column="4" Grid.Row="5" Margin="5" Click="CloseWindow_Click"/>
+        <Button x:Name="ChangePassword" Content="Change Password" Grid.Column="4" Grid.Row="4" Margin="5" Click="ChangePassword_Click"/>
+        <Button x:Name="CreateNewCourse" Content="Create new course" Grid.Column="4" Grid.Row="3" Margin="5"/>
+        <Image Source="C:/Bootcamp_Project/ProjectAMa/Resources/teacher2.png" Grid.Column="1" Grid.Row="1" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>

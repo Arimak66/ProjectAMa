@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d" FontSize="14"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" Background="LightGray"
         Title="StudentWindow" Height="450" Width="800" >
 
     <Grid>
@@ -14,9 +14,8 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
 
@@ -28,12 +27,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Button Content="Button" Grid.Column="1" Grid.Row="3" Margin="10" Click="Button_Click"/>
-        <TextBox Name="welcomeText" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="10" Text="{Binding Firstname; Lastname}"/>
-        <Button x:Name="CloseWindow" Content="Close window and exit" Grid.Column="3" Grid.Row="4" Margin="10" Click="CloseWindow_Click"/>
-        <Button x:Name="ChangePassword" Content="Change password" Grid.Column="3" Grid.Row="3" Margin="10" Click="ChangePassword_Click"/>
+        <Button Content="Button" Grid.Column="3" Grid.Row="3" Margin="10" Click="Button_Click"/>
+        <TextBox Name="welcomeText" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Margin="10" Text="{Binding Firstname; Lastname}"/>
+        <Button x:Name="CloseWindow" Content="Close window and exit" Grid.Column="44" Grid.Row="4" Margin="10" Click="CloseWindow_Click"/>
+        <Button x:Name="ChangePassword" Content="Change password" Grid.Column="4" Grid.Row="3" Margin="10" Click="ChangePassword_Click"/>
+        <Image Source="c:/Bootcamp_Project/ProjectAMa/Resources/student4.jpg" Grid.Column="1" Grid.Row="1" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>

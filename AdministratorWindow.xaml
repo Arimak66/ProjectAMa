@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"        
-        Title="AdministratorWindow" Height="450" Width="800" >
+        WindowStartupLocation="CenterScreen" Background="LightGray"       
+        Title="AdministratorWindow" Height="450" Width="700" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -26,13 +26,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Button x:Name="AddNewUser" Grid.Column="4" Grid.Row="1" Margin="10" 
+        <Button x:Name="AddNewUser" Grid.Column="3" Grid.Row="1" Margin="10" 
                 Content="Add a new user" Click="AddNewUser_Click"/>
         <Button x:Name="CloseThisWindow" Grid.Column="4" Grid.Row="4" Margin="10" 
                 Content="Close this window and exit"  Click="CloseThisWindow_Click"/>
-        <Button x:Name="ChangePassword" Grid.Column="4" Grid.Row="2" Margin="10" 
+        <Button x:Name="ChangePassword" Grid.Column="3" Grid.Row="2" Margin="10" 
                 Content="Change password" Click="ChangePassword_Click"/>
-        <Button x:Name="CreateNewCourse" Grid.Column="4" Grid.Row="3" Margin="10"
+        <Button x:Name="CreateNewCourse" Grid.Column="3" Grid.Row="3" Margin="10"
                 Content="Create new course" Click="CreateNewCourse_Click"/>
         <Label Content="List of users:" Grid.Column="1" Grid.Row="1" Margin="10" 
                Grid.ColumnSpan="2" FontSize="18" />
@@ -60,6 +60,7 @@
                 Content="List all administrators"  Click="ListAllAdministrators_Click"/>
         <Button x:Name="SelectUser" Grid.Column="2" Grid.Row="5" Margin="10" 
                 Content="Select user"  Click="SelectUser_Click" />
+        <Image Source="c:/Bootcamp_Project/ProjectAMa/Resources/admin1.jpg" Grid.Column="3" Grid.Row="5" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>
