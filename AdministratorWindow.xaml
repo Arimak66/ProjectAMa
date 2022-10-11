@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen" Background="LightGray"       
-        Title="AdministratorWindow" Height="450" Width="750" >
+        Title="AdministratorWindow" Height="600" Width="750" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -19,6 +19,9 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -36,7 +39,7 @@
                 Content="Create a new course" Click="CreateNewCourse_Click"/>
         <Label Content="List of users:" Grid.Column="1" Grid.Row="1" Margin="10" 
                Grid.ColumnSpan="2" FontSize="18" />
-        <ListView x:Name="UserList" Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" 
+        <ListView x:Name="UserList" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" 
                   ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="True" 
                   SelectionChanged="SC_Click">
             <ListView.View>
@@ -58,9 +61,11 @@
                 Content="List all teachers"   Click="ListAllTeachers_Click"/>
         <Button x:Name="ListAllAdministrators" Grid.Column="2" Grid.Row="4" Margin="10" 
                 Content="List all administrators"  Click="ListAllAdministrators_Click"/>
-        <Button x:Name="SelectUser" Grid.Column="2" Grid.Row="5" Margin="10,70"
-                Content="Delete/Update selected user" Click="SelectUser_Click" />
-        <Image Source="c:/Bootcamp_Project/ProjectAMa/Resources/admin1.jpg" Grid.Column="3" Grid.Row="5" Stretch="UniformToFill"/>
+        <Button x:Name="deleteUser" Grid.Column="2" Grid.Row="7" Margin="10"
+                Content="Delete user" Click="deleteUser_Click" />
+        <Button x:Name="SelectUser" Grid.Column="2" Grid.Row="8" Margin="10"
+                Content="Select user" Click="SelectUser_Click" />
+        <Image Source="c:/Bootcamp_Project/ProjectAMa/Resources/admin2.jpg" Grid.Column="1" Grid.Row="8" Stretch="None"/>
 
     </Grid>
 </Window>

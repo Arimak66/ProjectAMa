@@ -126,8 +126,25 @@ namespace ProjectAMa
             }
             catch { MessageBox.Show("Select first user or list of users"); }
 
+        }
 
-
+        private void deleteUser_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Userdata userinfo = (Userdata)UserList.SelectedItems[0];
+                string status;
+                if (userinfo.Identity == 1) { status = "Student"; }
+                else if (userinfo.Identity == 2) { status = "Administrator"; }
+                else { status = "Teacher"; }
+                MessageBox.Show("You try to delete user: " + userinfo.Firstname + " " + userinfo.Lastname + " whose identity is " + status+" is this OK?");
+                using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
+                {
+                    var Users = connection.Execute($"delete from user where username='{userinfo.Username}'");
+                    MessageBox.Show("User " + userinfo.Username + ", " + userinfo.Firstname + " " + userinfo.Lastname + " was deleted successfully!");
+                }
+            }
+            catch { MessageBox.Show("Select first user or list of users"); }
         }
             public void SC_Click(object sender, SelectionChangedEventArgs e)
             {
