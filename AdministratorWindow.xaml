@@ -7,42 +7,59 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"        
         Title="AdministratorWindow" Height="450" Width="800" >
-
-
-
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="152*"/>
-            <ColumnDefinition Width="111*"/>
-            <ColumnDefinition Width="129*"/>
-            <ColumnDefinition Width="138*"/>
-            <ColumnDefinition Width="270*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="88*"/>
-            <RowDefinition Height="101*"/>
-            <RowDefinition Height="108*"/>
-            <RowDefinition Height="137*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Button x:Name="AddNewUser" Grid.Column="4" Content="Add a new user" HorizontalAlignment="Left" Height="36" Margin="36,52,0,0" VerticalAlignment="Top" Width="133" Click="AddNewUser_Click"/>
-        <Button x:Name="CloseThisWindow" Grid.Column="4" Content="Close this window and exit" HorizontalAlignment="Center" Margin="0,56,0,0" Grid.Row="3" VerticalAlignment="Top" Height="45" Width="148" Click="CloseThisWindow_Click"/>
-        <Button x:Name="ChangePassword" Grid.Column="4" Content="Change password" HorizontalAlignment="Left" Margin="36,66,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="133" Click="ChangePassword_Click"/>
-        <Button x:Name="CreateNewCourse" Grid.Column="4" Content="Create new course" HorizontalAlignment="Left" Margin="36,16,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="133" Click="CreateNewCourse_Click"/>
-        <Label Content="List of users:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="38,19,0,0" VerticalAlignment="Top" Width="137"/>
-        <ListView x:Name="UserList" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="330" Margin="38,52,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="328" ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="False" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="SC_Click">
+        <Button x:Name="AddNewUser" Grid.Column="4" Grid.Row="1" Margin="10" 
+                Content="Add a new user" Click="AddNewUser_Click"/>
+        <Button x:Name="CloseThisWindow" Grid.Column="4" Grid.Row="4" Margin="10" 
+                Content="Close this window and exit"  Click="CloseThisWindow_Click"/>
+        <Button x:Name="ChangePassword" Grid.Column="4" Grid.Row="2" Margin="10" 
+                Content="Change password" Click="ChangePassword_Click"/>
+        <Button x:Name="CreateNewCourse" Grid.Column="4" Grid.Row="3" Margin="10"
+                Content="Create new course" Click="CreateNewCourse_Click"/>
+        <Label Content="List of users:" Grid.Column="1" Grid.Row="1" Margin="10" 
+               Grid.ColumnSpan="2" FontSize="18" />
+        <ListView x:Name="UserList" Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" 
+                  ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="True" 
+                  SelectionChanged="SC_Click">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="80" Header="Username" DisplayMemberBinding="{Binding Path=Username}"/>
-                    <GridViewColumn Width="120" Header="Firstname"  DisplayMemberBinding="{Binding Path=Firstname}"/>
-                    <GridViewColumn Width="120" Header="Lastname"  DisplayMemberBinding="{Binding Path=Lastname}"/>
+                    <GridViewColumn Width="80" Header="Username" 
+                                    DisplayMemberBinding="{Binding Path=Username}"/>
+                    <GridViewColumn Width="120" Header="Firstname"  
+                                    DisplayMemberBinding="{Binding Path=Firstname}"/>
+                    <GridViewColumn Width="120" Header="Lastname"  
+                                    DisplayMemberBinding="{Binding Path=Lastname}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="ListAllUsers" Grid.Column="3" Content="List all users" HorizontalAlignment="Center" Height="34" Margin="0,52,0,0" VerticalAlignment="Top" Width="140" Click="ListAllUsers_Click"/>
-        <Button x:Name="ListAllStudents" Grid.Column="3" Content="List all students" HorizontalAlignment="Center" Height="34" Margin="0,16,0,0" VerticalAlignment="Top" Width="140" Grid.Row="1" Click="ListAllStudents_Click"/>
-        <Button x:Name="ListAllTeachers" Grid.Column="3" Content="List all teachers" HorizontalAlignment="Center" Height="34" Margin="0,66,0,0" VerticalAlignment="Top" Width="140" Grid.Row="1" Click="ListAllTeachers_Click"/>
-        <Button x:Name="ListAllAdministrators" Grid.Column="3" Content="List all administrators" HorizontalAlignment="Center" Height="34" Margin="0,23,0,0" VerticalAlignment="Top" Width="140" Grid.Row="2" Click="ListAllAdministrators_Click"/>
-        <Button x:Name="SelectUser" Grid.Column="3" Content="Select user" HorizontalAlignment="Left" Height="36" Margin="0,74,0,0" VerticalAlignment="Top" Width="84" Click="SelectUser_Click" RenderTransformOrigin="0.577,0.397" Grid.RowSpan="2" Grid.Row="2"/>
+        <Button x:Name="ListAllUsers" Grid.Column="2" Grid.Row="1" Margin="10" 
+                Content="List all users"  Click="ListAllUsers_Click"/>
+        <Button x:Name="ListAllStudents" Grid.Column="2" Grid.Row="2" Margin="10" 
+                Content="List all students"  Click="ListAllStudents_Click"/>
+        <Button x:Name="ListAllTeachers" Grid.Column="2" Grid.Row="3" Margin="10" 
+                Content="List all teachers"   Click="ListAllTeachers_Click"/>
+        <Button x:Name="ListAllAdministrators" Grid.Column="2" Grid.Row="4" Margin="10" 
+                Content="List all administrators"  Click="ListAllAdministrators_Click"/>
+        <Button x:Name="SelectUser" Grid.Column="2" Grid.Row="5" Margin="10" 
+                Content="Select user"  Click="SelectUser_Click" />
 
     </Grid>
 </Window>

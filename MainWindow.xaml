@@ -4,30 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
-        mc:Ignorable="d"
+        mc:Ignorable="d" FontSize="18"
                 WindowStartupLocation="CenterScreen"
 
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
 
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="70*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="153*"/>
-            <ColumnDefinition Width="124*"/>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Center" Height="43" Margin="0,14,0,0" VerticalAlignment="Top" Width="153" Click="LoginButton_Click"/>
+        <Button x:Name="LoginButton" Content="Login" Grid.Column="1" Grid.Row="1" Click="LoginButton_Click"/>
 
     </Grid>
 </Window>
