@@ -29,13 +29,15 @@ namespace ProjectAMa
             InitializeComponent();
         }
         //Probably should use Singleton or some other means to be able to convey "username" to the appropriate windows
-        public static string UserName;
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+
+        //public string UserName { get; private set; }
+        public void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             var connection = new MySqlConnection(Helper.CnnVal("OmaDB"));
             string Username = txtUsername.Text;
             string Password = txtPassword.Password;
-            UserName = txtUsername.Text;
+            string UserName = txtUsername.Text;
+ 
             if (Username == "" || Password == "")
             {
                 MessageBox.Show("Username or Password cannot be empty! Try Again!");
@@ -45,7 +47,11 @@ namespace ProjectAMa
             var output = connection.ExecuteScalar($"select password from user where username='{Username}'").ToString();
             if (BCrypt.Net.BCrypt.Verify(Password, output) /*|| txtPassword.Password == output*/)
             {
-                 var Identity = connection.ExecuteScalar<string>($"select identity from user where username='{Username}'");
+                //Singleton singObject = Singleton.Instance;
+                //singObject.Username = Username;
+                //singObject.Password = Password;
+
+                var Identity = connection.ExecuteScalar<string>($"select identity from user where username='{Username}'");
 
                 if (Convert.ToInt32(Identity) == 1)
                 {

@@ -16,7 +16,7 @@ namespace ProjectAMa
         public string lastname { get; set; }
 
     }
-    public class student
+    public class Student
     { }
 
 }
