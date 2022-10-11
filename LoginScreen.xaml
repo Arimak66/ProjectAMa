@@ -8,15 +8,15 @@
         WindowStartupLocation="CenterScreen"
         Title="Login" Height="400" Width="400" FontSize="14" Background="LightGray">
         
-    <Border Background="Black" CornerRadius="20" Margin="20">
+    <Border Background="LightSkyBlue" CornerRadius="20" Margin="20">
         <StackPanel Margin="20">
-        <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+        <Label Content="Login" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
-            <Label Content="Username:" FontSize="12" Foreground="White"/>
+            <Label Content="Username:" FontSize="12" Foreground="Black"/>
             <TextBox Name="txtUsername" Background="LightGray" Foreground="Black" FontSize="18"/>
-            <Label Content="Password:" FontSize="12" Foreground="White"/>
+            <Label Content="Password:" FontSize="12" Foreground="Black"/>
             <PasswordBox Name="txtPassword" Background="LightGray" Foreground="Black" FontSize="18"/>
-            <Button Name="btnSubmit" Content="Submit" Margin="60,10" Background="gray" Foreground="WHite" FontSize="18" Click="btnSubmit_Click"/>
+            <Button Name="btnSubmit" Content="Submit" Margin="60,10" Background="DarkGray" Foreground="Black" FontSize="18" Click="btnSubmit_Click"/>
         </StackPanel>
     </Border>
   

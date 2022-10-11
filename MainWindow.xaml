@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d" FontSize="18"
                 WindowStartupLocation="CenterScreen" Background="LightGray"
-        Title="Project AMa" Height="450" Width="600">
+        Title="Project AMa" Height="550" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -21,12 +21,14 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <Button x:Name="LoginButton" Content="Login to University" Grid.Column="3" Grid.Row="4" Margin="20" 
+        <Button x:Name="LoginButton" Content="Login to University" Grid.Column="3" Grid.Row="3" Margin="20" 
                 Click="LoginButton_Click"/>
-        <Image x:Name="OpeningImage" Source="c:/Bootcamp_Project/ProjectAMa/Resources/lutimage.jpg" Stretch="UniformToFill" Grid.Column="3" Grid.Row="5"/>
+        <Image x:Name="OpeningImage" Source="c:/Bootcamp_Project/ProjectAMa/Resources/lutimage.jpg" Stretch="UniformToFill" Grid.Column="3" Grid.Row="4"/>
+        <Button x:Name="ExitButton" Content="Exit the application" Grid.Column="3" Grid.Row="5" Margin="20" Click="ExitButton_Click"/>
 
     </Grid>
 </Window>

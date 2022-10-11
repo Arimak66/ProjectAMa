@@ -126,6 +126,8 @@ namespace ProjectAMa
             }
             catch { MessageBox.Show("Select first user or list of users"); }
 
+
+
         }
             public void SC_Click(object sender, SelectionChangedEventArgs e)
             {

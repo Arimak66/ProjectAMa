@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen" Background="LightGray"
-        Title="UserDataInsert" Height="600" Width="400">
+        Title="UserDataInsert" Height="650" Width="400">
 
     <Grid>
         <Grid.ColumnDefinitions>

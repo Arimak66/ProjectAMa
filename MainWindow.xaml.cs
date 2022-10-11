@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Org.BouncyCastle.Tls.Crypto;
+using System.Windows;
 
 namespace ProjectAMa
 {
@@ -16,6 +17,11 @@ namespace ProjectAMa
         {
             LoginScreen loginScreen = new LoginScreen();
             loginScreen.Show();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
