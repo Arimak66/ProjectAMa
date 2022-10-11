@@ -30,13 +30,13 @@ namespace ProjectAMa
         }
         //Probably should use Singleton or some other means to be able to convey "username" to the appropriate windows
 
-        //public string UserName { get; private set; }
+        public static string UserName;
         public void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             var connection = new MySqlConnection(Helper.CnnVal("OmaDB"));
             string Username = txtUsername.Text;
             string Password = txtPassword.Password;
-            string UserName = txtUsername.Text;
+            UserName = txtUsername.Text;
  
             if (Username == "" || Password == "")
             {
@@ -47,9 +47,9 @@ namespace ProjectAMa
             var output = connection.ExecuteScalar($"select password from user where username='{Username}'").ToString();
             if (BCrypt.Net.BCrypt.Verify(Password, output) /*|| txtPassword.Password == output*/)
             {
-                //Singleton singObject = Singleton.Instance;
-                //singObject.Username = Username;
-                //singObject.Password = Password;
+
+                UserName = Username;
+
 
                 var Identity = connection.ExecuteScalar<string>($"select identity from user where username='{Username}'");
 

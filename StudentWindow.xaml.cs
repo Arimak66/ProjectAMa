@@ -11,20 +11,20 @@ namespace ProjectAMa
     /// </summary>
     public partial class StudentWindow : Window
     {
-        public string UserName { get; private set; }
+
         public StudentWindow()
         {
             InitializeComponent();
         }
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Klikkasit sitten nappulaa, "+UserName);
-            using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
-            {
-                var Users = connection.Query<Userdata>($"select firstname,lastname from user where username='{UserName}'").ToList();
-                //string message = ToString(Users.firstname )
-                welcomeText.DataContext = Users;
-            }
+            //MessageBox.Show("Klikkasit sitten nappulaa, " UserName);
+            //using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
+            //{
+            //    var Users = connection.Query<Userdata>($"select firstname,lastname from user where username='{UserName}'").ToList();
+            //    //string message = ToString(Users.firstname )
+            //    welcomeText.DataContext = Users;
+            //}
         }
 
         private void CloseWindow_Click(object sender, RoutedEventArgs e)

@@ -7,13 +7,15 @@ namespace ProjectAMa
 //Common password changing window for all user categories. Encryption/decryption needed here as well
     public partial class ChangePassword : Window
     {
-        public string UserName { get; private set; }
+
         public ChangePassword()
         {
             InitializeComponent();
+
         }
         private void SetNewPassword_Click(object sender, RoutedEventArgs e)
         {
+            string UserName = LoginScreen.UserName;
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
                 var output = connection.ExecuteScalar($"select password from user where username = '{UserName}';").ToString();

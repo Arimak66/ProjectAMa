@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"        
-        Title="AdministratorWindow" Height="450" Width="800" Background="lightBlue">
+        Title="AdministratorWindow" Height="450" Width="800" >
+
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="152*"/>

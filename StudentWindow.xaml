@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="StudentWindow" Height="450" Width="800" Background="LightBlue">
+        Title="StudentWindow" Height="450" Width="800" >
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="69*"/>

@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectAMa"
         mc:Ignorable="d"
+                WindowStartupLocation="CenterScreen"
+
         Title="MainWindow" Height="450" Width="800">
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>
@@ -23,6 +27,7 @@
             <ColumnDefinition Width="160*"/>
             <ColumnDefinition Width="230*"/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Center" Height="43" Margin="0,14,0,0" VerticalAlignment="Top" Width="153" Click="LoginButton_Click"/>
 
     </Grid>
 </Window>
