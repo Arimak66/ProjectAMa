@@ -1,7 +1,7 @@
 # ProjectAMa
 This application is a WPF-interface to interact with the MySQL university-database. Database is located on a separate computer running Fedora Server. Data is read synchronously using Dapper ORM. 
 
-!(er_model.png)
+<img src="er_model.png"/>
 
 The application opens with a main window directing user to either a login screen or to exit the application. User authorization is done by comparing user inputted credentials with the data stored in the database. After successful authorization user is directed to an appropriate window based on user category, i.e. administratror, student of teacher. Each user category then can carry out operations that are allowed for each user category, administrator-category having the largest rights.
 
