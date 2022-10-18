@@ -19,7 +19,7 @@ User authorization is done by comparing user inputted credentials with the data 
 <br>
 Administrator can in the current version view user information and add/delete users. Administrator can also create a new course as well as change his/her own password. User information is output using ListView, thus user can be selected from the desired list by clicking. Update operations are at the moment under construction.
 <br>
-
+<img src="administratorview.png"/>
 <br>
 Student can at the moment view his/her own data in a limited fashion, as well as view courses and grades he/she has enrolled in. Changing of password is also possible.
 <br>
