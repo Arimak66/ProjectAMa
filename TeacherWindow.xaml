@@ -47,11 +47,9 @@
                     <ListView Name="UserList" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                   ItemsSource="{Binding Path=Users}" IsSynchronizedWithCurrentItem="False" 
                     ScrollViewer.VerticalScrollBarVisibility="Visible">
-
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Width="80" Header="Username" 
-                                    DisplayMemberBinding="{Binding Path=Username}"/>
+
                                 <GridViewColumn Width="120" Header="Firstname"  
                                     DisplayMemberBinding="{Binding Path=Firstname}"/>
                                 <GridViewColumn Width="120" Header="Lastname"  
