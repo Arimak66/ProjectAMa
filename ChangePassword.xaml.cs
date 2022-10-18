@@ -7,11 +7,9 @@ namespace ProjectAMa
 //Common password changing window for all user categories. Encryption/decryption needed here as well
     public partial class ChangePassword : Window
     {
-
         public ChangePassword()
         {
             InitializeComponent();
-
         }
         private void SetNewPassword_Click(object sender, RoutedEventArgs e)
         {

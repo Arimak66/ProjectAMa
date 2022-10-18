@@ -1,24 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MySqlConnector;
 using Dapper;
-using System.Security.Cryptography.X509Certificates;
-using System.Runtime.CompilerServices;
-using Org.BouncyCastle.Bcpg.OpenPgp;
-using System.Collections.ObjectModel;
-using System.Configuration;
-using Org.BouncyCastle.Crypto;
+using ProjectAMa.Models;
 
 namespace ProjectAMa
 {
@@ -31,33 +16,6 @@ namespace ProjectAMa
         {
             InitializeComponent();
         }
-
-        public class Userdata
-        {
-            public string Username { get; set; }
-            public int Identity { get; set; }
-            public string Firstname { get; set; }
-            public string Lastname { get; set; }
-
-            public Userdata(string username, int identity, string firstname, string lastname)
-            { this.Username = username; this.Identity = identity; this.Firstname = firstname; this.Lastname = lastname; }
-
-            public string UserInfo
-            {
-                get
-                {
-                    return $"{Username} {Firstname} {Lastname} ";
-                }
-            }
-        }
-        //public void InitializeUser()
-        //{
-        //    List<Userdata> Users = new List <Userdata>;
-        //    Users.Username = "";
-        //    Users.Identity = "";
-        //    Users.Firstname = "";
-        //    Users.Lastname = "";
-        //}
 
         private void AddNewUser_Click(object sender, RoutedEventArgs e)
         {
@@ -125,7 +83,6 @@ namespace ProjectAMa
                 MessageBox.Show("You selected user: " + userinfo.Firstname + " " + userinfo.Lastname + " whose identity is " + status);
             }
             catch { MessageBox.Show("Select first user or list of users"); }
-
         }
 
         private void deleteUser_Click(object sender, RoutedEventArgs e)
@@ -148,13 +105,7 @@ namespace ProjectAMa
         }
             public void SC_Click(object sender, SelectionChangedEventArgs e)
             {
-            //    //string status;
-            //    //Userdata userinfo = (Userdata)UserList.SelectedItems[0];
-            //    //if (userinfo.Identity == 1) { status = "Student"; }
-            //    //else if (userinfo.Identity == 2) { status = "Administrator"; }
-            //    //else { status = "Teacher"; }
 
-            //    //MessageBox.Show("Valitsit käyttäjän: " + userinfo.Firstname + " " + userinfo.Lastname + " identity= " + status);
             }
     } 
 }
