@@ -1,7 +1,8 @@
 <h1> WPF user interface </h1>
 <br>
 This application is a WPF-interface to interact with the MySQL university-database. Database is located on a separate computer running Fedora Server. Data is read synchronously using Dapper ORM. 
-
+<br><br>
+<h2>ER-model</h2>
 
 
 <img src="er_model.png"/>
