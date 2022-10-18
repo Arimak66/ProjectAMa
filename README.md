@@ -16,5 +16,5 @@ User authorization is done by comparing user inputted credentials with the data 
 <img src="administratorview.png"/>
 <br>
 Administrator can view, create, delete or update user information.
-
+<br>
 The application should be converted to the MVVM-model in the future.
