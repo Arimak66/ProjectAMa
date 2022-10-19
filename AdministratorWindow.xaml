@@ -11,7 +11,9 @@
         <DockPanel>
             <Menu x:Name="AdministratorMenu">
                 <Menu DockPanel.Dock="Top" FontSize="16" Width="810" Margin="10 0 0 10">
-                    <MenuItem Header="_File"/>
+                    <MenuItem Header="_File">
+                        <MenuItem x:Name="Exit" Header="_Exit" Click="CloseThisWindow_Click"/>
+                    </MenuItem>
                     <MenuItem Header="_List">
                         <MenuItem x:Name="AllUsers" Header="_All users" Click="ListAllUsers_Click"/>
                         <MenuItem x:Name="AllStudents" Header="_All students" Click="ListAllStudents_Click"/>

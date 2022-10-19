@@ -129,7 +129,6 @@
       <DependentUpon>LoginScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Data.cs" />
-    <Compile Include="Singleton.cs" />
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
@@ -168,7 +167,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Person.cs" />
-    <Compile Include="DataAccess.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -20,7 +20,9 @@ namespace ProjectAMa
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
-                var User = connection.Query<Userdata>($"select username,firstname,lastname from user where username='{UserName}'").ToList(); 
+                var User = connection.Query<Userdata>($"select username,firstname,lastname from user where username='{UserName}'").ToList();
+                UserList.ItemsSource = User;
+
                 UserList.ItemsSource = User;
             }
         }
@@ -48,7 +50,7 @@ namespace ProjectAMa
         {
             using (var connection = new MySqlConnection(Helper.CnnVal("OmaDB")))
             {
-                var Grades = connection.Query<GradeData>($"select name,greditpoints,grade,date" +
+                var Grades = connection.Query<GradeData>($"select name,greditpoints,grade" +
                 $" from course inner join grade on course.idcourse=grade.idcourse" +
                 $" inner join student on student.idstudent=grade.idstudent" +
                 $" inner join user users on users.iduser=student.idstudent where users.username='{UserName}'").ToList();

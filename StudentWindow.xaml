@@ -12,7 +12,9 @@
         <Menu x:Name="StudentMenu">
 
             <Menu DockPanel.Dock="Top" FontSize="16" Width="810" Margin="10 0 0 10">
-                <MenuItem Header="_File"/>
+                <MenuItem Header="_File">
+                        <MenuItem x:Name="Exit" Header="_Exit" Click="CloseWindow_Click"/>
+                </MenuItem>
                 <MenuItem Header="_Show data" Click="Button_Click" />
                 <MenuItem Header="_Show courses" Click="Courses_Click"/>
                 <MenuItem Header="_Show grades" Click="Grades_Click"  />
@@ -54,7 +56,8 @@
                                     DisplayMemberBinding="{Binding Path=Firstname}"/>
                         <GridViewColumn Width="120" Header="Lastname"  
                                     DisplayMemberBinding="{Binding Path=Lastname}"/>
-                    </GridView>
+
+                            </GridView>
                 </ListView.View>
             </ListView>
 

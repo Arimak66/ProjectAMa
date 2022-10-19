@@ -32,6 +32,7 @@ namespace ProjectAMa.Models
     {
         public string Name { get; set; }
         public Int16 CreditPoints { get; set; }       
+        public DateTime StartDate { get; set; }
         public CourseData(string name, Int16 creditpoints)
             { this.Name = name; this.CreditPoints = creditpoints; }
         public CourseData()
